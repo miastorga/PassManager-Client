@@ -30,6 +30,15 @@
       ],
       "@spartan-ng/ui-label-helm": [
         "./spartan-ui/ui-label-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-card-helm": [
+        "./spartan-ui/ui-card-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-checkbox-helm": [
+        "./spartan-ui/ui-checkbox-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-icon-helm": [
+        "./spartan-ui/ui-icon-helm/src/index.ts"
       ]
     }
   },

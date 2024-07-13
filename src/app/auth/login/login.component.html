@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="mt-12">
+  <div class="flex flex-col justify-center items-center">
+    <img src="logo.png" class="w-72" alt="">
+    <p class="text-xl my-5 font-medium">Identificarse</p>
+  </div>
+  <div class="flex flex-col justify-center items-center">
+    <form [formGroup]="loginForm" (ngSubmit)="signIn()" class="flex flex-col justify-center items-center p-7 border">
+      <div>
+        <label hlmLabel>Correo electronico
+          <input class='w-80 p-2' hlmInput type='email' formControlName="email" />
+          @if (hasErrors('email','required')) {
+          <p>Email requerido</p>
+          }
+          @if (hasErrors('email','email')) {
+          <p>No es un email valido</p>
+          }
+        </label>
+        <label class="flex items-center mt-5 gap-2" hlmLabel>
+          <hlm-checkbox formControlName="isCheck" />
+          Recordar correo electronico
+        </label>
+        <button hlmBtn class="p-2 w-full my-11">Continuar</button>
+      </div>
+      <p class="mt-5 text-sm">¿Eres nuevo?
+        <a class="text-primary hover:underline" routerLink="/register" routerLinkActive="active"
+          ariaCurrentWhenActive="page">Crear
+          cuenta</a>
+      </p>
+    </form>
+  </div>
+</div>
