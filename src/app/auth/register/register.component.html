@@ -1,1 +1,52 @@
-<p>register works!</p>
+<div class="mt-12">
+  <div class="flex flex-col justify-center items-center">
+    <p class="text-xl mb-2 font-medium">Crear cuenta</p>
+  </div>
+  <div class="flex flex-col justify-center items-center">
+    <form class="flex flex-col justify-center items-center p-7 border ">
+      <div class="flex flex-col w-full gap-6">
+        <label hlmLabel>Correo electronico
+          <div class="flex flex-col items-start py-2 gap-2">
+
+            <input class='w-full' hlmInput type='email' formControlName="email" />
+            <p class="font-thin">Utilizarás tu correo electrónico para acceder.</p>
+          </div>
+        </label>
+        <label hlmLabel>Nombre
+          <div class="flex flex-col items-start py-2 gap-2">
+            <input class='w-full' hlmInput type='email' formControlName="email" />
+            <p class="font-thin">¿Cómo deberíamos llamarte?</p>
+          </div>
+        </label>
+        <label hlmLabel>Contraseña maestra
+          <div class="flex items-center py-2 gap-2">
+            <input class='w-full' hlmInput type='password' formControlName="email" />
+            <label class="items-center" hlmLabel>
+              <hlm-checkbox formControlName=" isCheck" class="w-5 h-5" />
+            </label>
+          </div>
+          <p class="font-thin text-sm ">
+            ¡Las contraseñas maestras no pueden ser recuperadas si las olvidas!
+          </p>
+        </label>
+        <label hlmLabel>Vuele a escribir tu contraseña maestra
+          <div class="flex items-center py-2 gap-2">
+            <input class='w-full' hlmInput type='password' formControlName="email" />
+            <label class="items-center" hlmLabel>
+              <hlm-checkbox formControlName=" isCheck" class="w-5 h-5" />
+            </label>
+          </div>
+        </label>
+        <label class="flex items-center gap-2" hlmLabel>
+          <hlm-checkbox formControlName="isCheck" />
+          Términos y condiciones del servicio, Política de privacidad
+        </label>
+        <button hlmBtn class="p-2 w-full my-5">Crear cuenta</button>
+      </div>
+      <p class="mt-5 text-sm">¿Ya tienes una cuenta?
+        <a class="text-primary hover:underline" routerLink="/login" routerLinkActive="active"
+          ariaCurrentWhenActive="page">Identificarse</a>
+      </p>
+    </form>
+  </div>
+</div>

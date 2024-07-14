@@ -13,7 +13,7 @@ import { HlmCheckboxComponent, HlmCheckboxCheckIconComponent } from '@spartan-ng
 import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-login',
