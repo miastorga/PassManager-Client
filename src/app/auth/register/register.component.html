@@ -3,42 +3,73 @@
     <p class="text-xl mb-2 font-medium">Crear cuenta</p>
   </div>
   <div class="flex flex-col justify-center items-center">
-    <form class="flex flex-col justify-center items-center p-7 border ">
+    <form [formGroup]="registerForm" class="flex flex-col justify-center items-center p-7 border w-[450px]">
       <div class="flex flex-col w-full gap-6">
         <label hlmLabel>Correo electronico
           <div class="flex flex-col items-start py-2 gap-2">
-
             <input class='w-full' hlmInput type='email' formControlName="email" />
-            <p class="font-thin">Utilizarás tu correo electrónico para acceder.</p>
+            @if (hasErrors('email','required')) {
+            <p>Email requerido</p>
+            }@else if (hasErrors('email','email')) {
+            <p>No es un email valido</p>
+            }@else {
+            <p class="font-thin text-sm">Utilizarás tu correo electrónico para acceder.</p>
+            }
           </div>
         </label>
         <label hlmLabel>Nombre
           <div class="flex flex-col items-start py-2 gap-2">
-            <input class='w-full' hlmInput type='email' formControlName="email" />
-            <p class="font-thin">¿Cómo deberíamos llamarte?</p>
+            <input class='w-full' hlmInput type='text' formControlName="name" />
+            @if (hasErrors('name','required')) {
+            <p>Nombre requerido</p>
+            }@else if (hasErrors('name','minlength')) {
+            <p>Minimo son 3 caracteres</p>
+            }@else {
+            <p class="font-thin text-sm">¿Cómo deberíamos llamarte?</p>
+            }
           </div>
         </label>
         <label hlmLabel>Contraseña maestra
           <div class="flex items-center py-2 gap-2">
-            <input class='w-full' hlmInput type='password' formControlName="email" />
-            <label class="items-center" hlmLabel>
-              <hlm-checkbox formControlName=" isCheck" class="w-5 h-5" />
-            </label>
+            <input class='w-full' hlmInput [type]="isOn?'password':'text' " formControlName="masterPassword" />
+            <button brnToggle (click)="toggleState()" hlm class="p-2">
+              @if (isOn) {
+              <hlm-icon size="sm" class="w-5 h-5" name="lucideEye" />
+              }@else {
+              <hlm-icon size="sm" class="w-5 h-5" name="lucideEyeOff" />
+              }
+            </button>
           </div>
+          @if (hasErrors('masterPassword','required')) {
+          <p>Contraseña requrida</p>
+          }@else if (hasErrors('masterPassword','minlength')) {
+          <p>Minimo son 12 caracteres</p>
+          }@else {
           <p class="font-thin text-sm ">
             ¡Las contraseñas maestras no pueden ser recuperadas si las olvidas!
           </p>
+          }
         </label>
         <label hlmLabel>Vuele a escribir tu contraseña maestra
           <div class="flex items-center py-2 gap-2">
-            <input class='w-full' hlmInput type='password' formControlName="email" />
-            <label class="items-center" hlmLabel>
-              <hlm-checkbox formControlName=" isCheck" class="w-5 h-5" />
-            </label>
+            <input class='w-full' hlmInput [type]="isOnConfirmation?'password':'text' "
+              formControlName="masterPasswordConfirmation" />
+            <button brnToggle (click)="toggleStateConfirmation()" hlm class="p-2">
+              @if (isOnConfirmation) {
+              <hlm-icon size="sm" class="w-5 h-5" name="lucideEye" />
+              }@else {
+              <hlm-icon size="sm" class="w-5 h-5" name="lucideEyeOff" />
+              }
+            </button>
           </div>
+          @if (hasErrors('masterPasswordConfirmation','required')) {
+          <p>Contraseña requrida</p>
+          }@else if (hasErrors('masterPasswordConfirmation','minlength')) {
+          <p>Minimo son 12 caracteres</p>
+          }
         </label>
         <label class="flex items-center gap-2" hlmLabel>
-          <hlm-checkbox formControlName="isCheck" />
+          <hlm-checkbox />
           Términos y condiciones del servicio, Política de privacidad
         </label>
         <button hlmBtn class="p-2 w-full my-5">Crear cuenta</button>
