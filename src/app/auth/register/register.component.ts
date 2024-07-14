@@ -15,7 +15,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { HlmToggleDirective } from '@spartan-ng/ui-toggle-helm';
 import { BrnToggleDirective } from '@spartan-ng/ui-toggle-brain';
 import { HlmIconComponent } from '@spartan-ng/ui-icon-helm';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, ValidatorFn } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
 import { provideIcons } from '@ng-icons/core';
 import { lucideEye, lucideEyeOff } from '@ng-icons/lucide';
 
@@ -57,7 +57,11 @@ export class RegisterComponent {
       name: ['', [Validators.required, Validators.minLength(3)]],
       masterPassword: ['', [Validators.required, Validators.minLength(12)]],
       masterPasswordConfirmation: ['', [Validators.required, Validators.minLength(12)]],
-    });
+    },
+      {
+        validators: this.passwordMathValidator
+      }
+    );
   }
 
   hasErrors(controlName: string, errorType: string) {
@@ -73,16 +77,7 @@ export class RegisterComponent {
     this.isOnConfirmation = !this.isOnConfirmation
   }
 
-  asswordMatchValidator(): ValidatorFn {
-    return (formGroup: FormGroup): { [key: string]: boolean } | null => {
-      const password = formGroup.get('masterPassword');
-      const confirmPassword = formGroup.get('masterPasswordConfirmation');
-
-      if (password && confirmPassword && password.value !== confirmPassword.value) {
-        return { passwordMismatch: true };
-      }
-
-      return null;
-    };
+  passwordMathValidator(form: FormGroup) {
+    return form.get('masterPassword')?.value === form.get('masterPasswordConfirmation')?.value ? null : { mistmatch: true }
   }
 }

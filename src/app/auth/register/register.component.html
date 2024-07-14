@@ -66,13 +66,16 @@
           <p>Contraseña requrida</p>
           }@else if (hasErrors('masterPasswordConfirmation','minlength')) {
           <p>Minimo son 12 caracteres</p>
+          }@else if(registerForm.errors?.['mistmatch'] &&
+          registerForm.touched){
+          <p>La confirmacion de contraseña maestra no coincide</p>
           }
         </label>
         <label class="flex items-center gap-2" hlmLabel>
           <hlm-checkbox />
           Términos y condiciones del servicio, Política de privacidad
         </label>
-        <button hlmBtn class="p-2 w-full my-5">Crear cuenta</button>
+        <button hlmBtn class="p-2 w-full my-5" type="submit" [disabled]="!registerForm.valid">Crear cuenta</button>
       </div>
       <p class="mt-5 text-sm">¿Ya tienes una cuenta?
         <a class="text-primary hover:underline" routerLink="/login" routerLinkActive="active"
