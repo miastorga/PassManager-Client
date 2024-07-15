@@ -41,7 +41,7 @@
             </button>
           </div>
           @if (hasErrors('masterPassword','required')) {
-          <p>Contraseña requrida</p>
+          <p>Contraseña requerida</p>
           }@else if (hasErrors('masterPassword','minlength')) {
           <p>Minimo son 12 caracteres</p>
           }@else {
@@ -50,12 +50,12 @@
           </p>
           }
         </label>
-        <label hlmLabel>Vuele a escribir tu contraseña maestra
+        <label hlmLabel>Vuelve a escribir tu contraseña maestra
           <div class="flex items-center py-2 gap-2">
-            <input class='w-full' hlmInput [type]="isOnConfirmation?'password':'text' "
+            <input class='w-full' hlmInput [type]="isOn?'password':'text' "
               formControlName="masterPasswordConfirmation" />
-            <button brnToggle (click)="toggleStateConfirmation()" hlm class="p-2">
-              @if (isOnConfirmation) {
+            <button brnToggle (click)="toggleState()" hlm class="p-2">
+              @if (isOn) {
               <hlm-icon size="sm" class="w-5 h-5" name="lucideEye" />
               }@else {
               <hlm-icon size="sm" class="w-5 h-5" name="lucideEyeOff" />
@@ -63,11 +63,10 @@
             </button>
           </div>
           @if (hasErrors('masterPasswordConfirmation','required')) {
-          <p>Contraseña requrida</p>
+          <p>Contraseña requerida</p>
           }@else if (hasErrors('masterPasswordConfirmation','minlength')) {
           <p>Minimo son 12 caracteres</p>
-          }@else if(registerForm.errors?.['mistmatch'] &&
-          registerForm.touched){
+          }@else if(hasErrors('masterPasswordConfirmation','mistmatch')){
           <p>La confirmacion de contraseña maestra no coincide</p>
           }
         </label>

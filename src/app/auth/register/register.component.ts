@@ -49,7 +49,6 @@ export class RegisterComponent {
 
   registerForm: FormGroup;
   isOn = true
-  isOnConfirmation = true
 
   constructor(private formBuilder: FormBuilder) {
     this.registerForm = this.formBuilder.group({
@@ -57,10 +56,9 @@ export class RegisterComponent {
       name: ['', [Validators.required, Validators.minLength(3)]],
       masterPassword: ['', [Validators.required, Validators.minLength(12)]],
       masterPasswordConfirmation: ['', [Validators.required, Validators.minLength(12)]],
-    },
-      {
-        validators: this.passwordMathValidator
-      }
+    }, {
+      validators: this.passwordMatchValidator
+    }
     );
   }
 
@@ -73,11 +71,18 @@ export class RegisterComponent {
     this.isOn = !this.isOn
   }
 
-  toggleStateConfirmation() {
-    this.isOnConfirmation = !this.isOnConfirmation
+  passwordMatchValidator(formGroup: AbstractControl): ValidationErrors | null {
+    const password = formGroup.get('masterPassword')?.value;
+    const confirmPassword = formGroup.get('masterPasswordConfirmation')?.value;
+    if (password !== confirmPassword) {
+      formGroup.get('masterPasswordConfirmation')?.setErrors({ mistmatch: true });
+      return { mistmatch: true };
+    } else {
+      if (formGroup.get('masterPasswordConfirmation')?.hasError('mistmatch')) {
+        formGroup.get('masterPasswordConfirmation')?.setErrors(null);
+      }
+      return null;
+    }
   }
 
-  passwordMathValidator(form: FormGroup) {
-    return form.get('masterPassword')?.value === form.get('masterPasswordConfirmation')?.value ? null : { mistmatch: true }
-  }
 }
