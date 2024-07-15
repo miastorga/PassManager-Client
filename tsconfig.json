@@ -42,6 +42,9 @@
       ],
       "@spartan-ng/ui-toggle-helm": [
         "./spartan-ui/ui-toggle-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-table-helm": [
+        "./spartan-ui/ui-table-helm/src/index.ts"
       ]
     }
   },

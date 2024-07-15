@@ -63,7 +63,6 @@ export class RegisterComponent {
   }
 
   hasErrors(controlName: string, errorType: string) {
-    console.log(this.registerForm)
     return this.registerForm.get(controlName)?.hasError(errorType) && this.registerForm.get(controlName)?.touched;
   }
 
@@ -74,6 +73,7 @@ export class RegisterComponent {
   passwordMatchValidator(formGroup: AbstractControl): ValidationErrors | null {
     const password = formGroup.get('masterPassword')?.value;
     const confirmPassword = formGroup.get('masterPasswordConfirmation')?.value;
+
     if (password !== confirmPassword) {
       formGroup.get('masterPasswordConfirmation')?.setErrors({ mistmatch: true });
       return { mistmatch: true };
@@ -84,5 +84,4 @@ export class RegisterComponent {
       return null;
     }
   }
-
 }
