@@ -15,7 +15,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { HlmToggleDirective } from '@spartan-ng/ui-toggle-helm';
 import { BrnToggleDirective } from '@spartan-ng/ui-toggle-brain';
 import { HlmIconComponent } from '@spartan-ng/ui-icon-helm';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { provideIcons } from '@ng-icons/core';
 import { lucideEye, lucideEyeOff } from '@ng-icons/lucide';
 

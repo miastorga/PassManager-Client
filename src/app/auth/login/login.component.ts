@@ -39,7 +39,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm: FormGroup;
+  loginForm: FormGroup
 
   constructor(private localStorageService: LocalStorageService, private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
