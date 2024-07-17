@@ -8,7 +8,7 @@
       <div>
         <label hlmLabel>Contraseña maestra
           <div class="flex items-center py-2 gap-2">
-            <input class='w-80 p-2' hlmInput [type]="isOn?'password':'text' " formControlName="password" />
+            <input class='w-80 p-2' value="hola" hlmInput [type]="isOn?'password':'text' " formControlName="password" />
             <button brnToggle (click)="toggleState()" hlm class="p-2">
               @if (isOn) {
               <hlm-icon size="sm" class="w-5 h-5" name="lucideEye" />
@@ -26,7 +26,7 @@
         </label>
         <button hlmBtn class="p-2 w-full my-11" routerLink="/lock">Iniciar sesion con contraseña maestra</button>
       </div>
-      <p class="mt-5 text-sm">Iniciar sesion como ...
+      <p class="mt-5 text-sm">Iniciar sesion como <span>{{email}}</span>
       </p>
       <a class="text-primary hover:underline text-sm" routerLink="/login" routerLinkActive="active"
         ariaCurrentWhenActive="page">¿No eres tu?</a>

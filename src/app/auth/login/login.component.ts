@@ -13,7 +13,8 @@ import { HlmCheckboxComponent, HlmCheckboxCheckIconComponent } from '@spartan-ng
 import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { state } from '@angular/animations';
 
 @Component({
   selector: 'app-login',
@@ -41,7 +42,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup
 
-  constructor(private localStorageService: LocalStorageService, private formBuilder: FormBuilder) {
+  constructor(private localStorageService: LocalStorageService, private formBuilder: FormBuilder, private router: Router) {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       isCheck: [false]
@@ -75,10 +76,14 @@ export class LoginComponent implements OnInit {
     return this.localStorageService.getItem('isRememberEmail');
   }
 
+  navigateToLock() {
+    const email = this.loginForm.get('email')?.value
+    this.router.navigate(['lock'], { state: { email } })
+  }
+
   signIn() {
     this.saveIsRememberEmailLocalStorage();
     this.saveEmailLocalStorage();
-    console.log(this.loginForm.value);
   }
 
   hasErrors(controlName: string, errorType: string) {
