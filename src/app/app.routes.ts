@@ -10,5 +10,5 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'lock', component: LockComponent, canActivate: [authGuard] },
   { path: 'vault', component: SafeBoxComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }
+  { path: '**', redirectTo: '/login', pathMatch: 'full' }
 ];

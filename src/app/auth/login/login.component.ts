@@ -69,6 +69,7 @@ export class LoginComponent implements OnInit {
   }
 
   getEmailLocalStorage() {
+    console.log(this.localStorageService.getItem('loginEmail'))
     return this.localStorageService.getItem('loginEmail');
   }
 
@@ -84,6 +85,8 @@ export class LoginComponent implements OnInit {
   signIn() {
     this.saveIsRememberEmailLocalStorage();
     this.saveEmailLocalStorage();
+    const email = this.loginForm.get('email')?.value
+    this.router.navigate(['lock'], { state: { email } })
   }
 
   hasErrors(controlName: string, errorType: string) {
