@@ -1,0 +1,63 @@
+<div class="flex min-h-screen">
+  <aside class="w-[200px] min-w-[200px] bg-primary border-r border-r-dashed sidenav">
+    <div class="flex flex-col h-full">
+      <div class="flex shrink-0 px-8 items-center justify-between h-[96px]">
+        <a class="transition-colors duration-200 ease-in-out" href="https://www.loopple.com">
+          <img alt="Logo"
+            src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/logos/loopple.svg"
+            class="inline">
+        </a>
+        <h1>ClaveSegura</h1>
+      </div>
+      <div class="flex-grow">
+        <div class="relative pl-3 my-">
+          <div class="flex flex-col w-full font-medium">
+            <!-- menu item -->
+            <div>
+              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                <a href="javascript:;" class="flex items-center flex-grow text-[1.15rem] text-white hover:text-dark">Mi
+                  cuenta</a>
+              </span>
+            </div>
+            <!-- menu item -->
+            <div>
+              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                <a href="javascript:;"
+                  class="flex items-center flex-grow text-[1.15rem] text-white hover:text-dark">Cajas fuertes</a>
+              </span>
+            </div>
+            <!-- menu item -->
+            <div>
+              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                <a href="javascript:;"
+                  class="flex items-center flex-grow text-[1.15rem] text-white hover:text-dark">Generador</a>
+              </span>
+            </div>
+            <!-- menu item -->
+            <div>
+              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
+                <a href="javascript:;"
+                  class="flex items-center flex-grow text-[1.15rem] text-white hover:text-dark">Configuracion</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div>
+    <app-header />
+    <div class="flex flex-wrap gap-4 justify-center">
+      <app-safe-box />
+      <app-safe-box />
+      <app-safe-box />
+      <app-safe-box />
+      <app-safe-box />
+      <app-safe-box />
+      <app-safe-box />
+      <app-safe-box />
+      <app-safe-box />
+      <app-safe-box />
+    </div>
+  </div>
+</div>

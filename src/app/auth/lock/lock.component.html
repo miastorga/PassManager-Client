@@ -24,7 +24,9 @@
           <p>Minimo son 12 caracteres</p>
           }
         </label>
-        <button hlmBtn class="p-2 w-full my-11" routerLink="/lock">Iniciar sesion con contraseña maestra</button>
+        <button hlmBtn class="p-2 w-full my-11" routerLink="/vault/safe-box" [disabled]="!lockForm.valid">Iniciar sesion
+          con
+          contraseña maestra</button>
       </div>
       <p class="mt-5 text-sm">Iniciar sesion como <span>{{email}}</span>
       </p>

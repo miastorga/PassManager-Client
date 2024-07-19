@@ -19,7 +19,7 @@
           <hlm-checkbox formControlName="isCheck" />
           Recordar correo electronico
         </label>
-        <button hlmBtn class="p-2 w-full my-11">Continuar</button>
+        <button hlmBtn class="p-2 w-full my-11" [disabled]="!loginForm.valid">Continuar</button>
       </div>
       <p class="mt-5 text-sm">¿Eres nuevo?
         <a class="text-primary hover:underline text-sm" routerLink="/register" routerLinkActive="active"
