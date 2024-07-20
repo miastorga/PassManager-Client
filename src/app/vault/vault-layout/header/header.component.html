@@ -1,4 +1,64 @@
-<div class="flex justify-between p-10 ">
-  <h1>Todas las cajas fuertes</h1>
-  <button>Agregar caja fuerte</button>
+<div class="flex justify-between py-10 px-5">
+  <h1 class="text-3xl">Todas las cajas fuertes</h1>
+  <div class=" flex gap-2">
+    <hlm-dialog>
+      <button id="edit-profile" class="text-white" brnDialogTrigger hlmBtn>
+        <hlm-icon size='sm' class="mr-2" name="lucidePlus" />
+        Caja fuerte</button>
+      <hlm-dialog-content class="sm:max-w-[500px]" *brnDialogContent="let ctx">
+        <hlm-dialog-header>
+          <h3 hlmDialogTitle>Caja fuerte</h3>
+          <p hlmDialogDescription>Agrega una nueva caja fuerte. Asegurate de guardar tus cambios</p>
+        </hlm-dialog-header>
+        <form [formGroup]="safeBoxForm" class="py-4 grid gap-4" (ngSubmit)="onSubmit()">
+          <div class="items-center grid grid-cols-4 gap-4">
+            <label hlmLabel for="name" class="text-right">Nombre</label>
+            <input hlmInput id="name" type="text" formControlName="nombre" class="col-span-3" />
+            @if (hasErrors('nombre','required')) {
+            <p>nombre es requerido</p>
+            }
+          </div>
+          <div class="items-center grid grid-cols-4 gap-4">
+            <label hlmLabel for="carpeta" class="text-right">Carpeta</label>
+            <input hlmInput id="carpeta" type="text" formControlName="carpeta" class="col-span-3" />
+          </div>
+          <div class="items-center grid grid-cols-4 gap-4">
+            <label hlmLabel for="username" class="text-right">Usuario</label>
+            <input hlmInput id="username" type="text" formControlName="usuario" class="col-span-3" />
+          </div>
+          <div class="items-center grid grid-cols-4 gap-4">
+            <label hlmLabel for="contraseña" class="text-right">Contraseña</label>
+            <input hlmInput id="contraseña" type="password" formControlName="contraseña" class=" col-span-3" />
+          </div>
+          <div class="items-center grid grid-cols-4 gap-4">
+            <label hlmLabel for="notas" class="text-right">Notas</label>
+            <textarea hlmInput id="notas" maxlength="500" formControlName="notas" class="col-span-3"></textarea>
+          </div>
+          <hlm-dialog-footer>
+            <button hlmBtn type="submit" [disabled]="!safeBoxForm.valid">Agregar</button>
+          </hlm-dialog-footer>
+        </form>
+      </hlm-dialog-content>
+    </hlm-dialog>
+    <hlm-dialog>
+      <button id="edit-profile" class="text-white" brnDialogTrigger hlmBtn>
+        <hlm-icon size='sm' class="mr-2" name="lucidePlus" />
+        Carpeta</button>
+      <hlm-dialog-content class="sm:max-w-[425px]" *brnDialogContent="let ctx">
+        <hlm-dialog-header>
+          <h3 hlmDialogTitle>Carpeta</h3>
+          <p hlmDialogDescription>Agrega una nueva carpeta. Asegurate de guardar tus cambios</p>
+        </hlm-dialog-header>
+        <form [formGroup]="folderForm" class="py-4 grid gap-4" (ngSubmit)="onSubmitFolder()">
+          <div class="items-center grid grid-cols-4 gap-4">
+            <label hlmLabel for="carpeta" class="text-right">Carpeta</label>
+            <input hlmInput id="carpeta" formControlName="carpeta" type="text" class="col-span-3" />
+          </div>
+          <hlm-dialog-footer>
+            <button hlmBtn type="submit" class="text-white">Agregar</button>
+          </hlm-dialog-footer>
+        </form>
+      </hlm-dialog-content>
+    </hlm-dialog>
+  </div>
 </div>

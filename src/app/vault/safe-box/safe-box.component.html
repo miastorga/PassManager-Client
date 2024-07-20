@@ -1,11 +1,74 @@
-<!-- <main class="grip grid-cols-4"> -->
-<section hlmCard class="md:w-72 lg:w-[400px]">
+<section hlmCard class="md:w-72 lg:w-[380px] hover:bg-slate-50">
   <div hlmCardHeader class="pb-0">
-    <h3 hlmCardTitle>Google</h3>
+    <div hlmCardTitle>
+      <h3>Google</h3>
+    </div>
     <p hlmCardDescription>google.com</p>
   </div>
   <p hlmCardContent>Banca</p>
-  <p hlmCardFooter class="pb-0 text-sm">20.568.723-8</p>
-  <p hlmCardFooter class="pb-0 text-sm">***************</p>
+  <p hlmCardFooter class="pb-0 text-sm">{{usuario}}</p>
+  <div hlmCardFooter class="pb-0 text-sm flex justify-between ">
+    <p>{{password}}</p>
+    <div class="flex justify-center gap-5 justify-items-center">
+      <button class="bg-transparent" (click)="copyToClipBoard(usuario)">
+        <hlm-icon size='sm' name="lucideUser2" />
+      </button>
+      <button class="bg-transparent" (click)="copyToClipBoard(password)">
+        <hlm-icon size='sm' name=" lucideKey" />
+      </button>
+      <hlm-dialog>
+        <button class="bg-transparent" brnDialogTrigger>
+          <hlm-icon size='sm' name="lucideEdit" />
+        </button>
+        <hlm-dialog-content class="sm:max-w-[500px]" *brnDialogContent="let ctx">
+          <hlm-dialog-header>
+            <h3 hlmDialogTitle>Caja fuerte</h3>
+            <p hlmDialogDescription>Edita una caja fuerte. Asegurate de guardar tus cambios</p>
+          </hlm-dialog-header>
+          <form class="py-4 grid gap-4">
+            <div class="items-center grid grid-cols-4 gap-4">
+              <label hlmLabel for="name" class="text-right">Nombre</label>
+              <input hlmInput id="name" type="text" formControlName="nombre" class="col-span-3" />
+
+            </div>
+            <div class="items-center grid grid-cols-4 gap-4">
+              <label hlmLabel for="carpeta" class="text-right">Carpeta</label>
+              <input hlmInput id="carpeta" type="text" formControlName="carpeta" class="col-span-3" />
+            </div>
+            <div class="items-center grid grid-cols-4 gap-4">
+              <label hlmLabel for="username" class="text-right">Usuario</label>
+              <input hlmInput id="username" type="text" formControlName="usuario" class="col-span-3" />
+            </div>
+            <div class="items-center grid grid-cols-4 gap-4">
+              <label hlmLabel for="contraseña" class="text-right">Contraseña</label>
+              <input hlmInput id="contraseña" type="password" formControlName="contraseña" class=" col-span-3" />
+            </div>
+            <div class="items-center grid grid-cols-4 gap-4">
+              <label hlmLabel for="notas" class="text-right">Notas</label>
+              <textarea hlmInput id="notas" maxlength="500" formControlName="notas" class="col-span-3"></textarea>
+            </div>
+            <hlm-dialog-footer>
+              <button hlmBtn type="submit">Agregar</button>
+            </hlm-dialog-footer>
+          </form>
+        </hlm-dialog-content>
+      </hlm-dialog>
+      <hlm-dialog>
+        <button class="bg-transparent" brnDialogTrigger>
+          <hlm-icon size='sm' name="lucideTrash2" />
+        </button>
+        <hlm-dialog-content class="sm:max-w-[425px]" *brnDialogContent="let ctx">
+          <hlm-dialog-header>
+            <h3 hlmDialogTitle>Eliminar caja fuerte</h3>
+            <p hlmDialogDescription>¿Estás seguro de que quieres eliminar esta caja fuerte</p>
+          </hlm-dialog-header>
+          <hlm-dialog-footer class="flex gap-2">
+            <button hlmBtn type="submit" class="text-white bg-destructive hover:bg-destructive">Si</button>
+            <button hlmBtn type="submit" (click)="ctx.close()" class="text-white">No</button>
+          </hlm-dialog-footer>
+        </hlm-dialog-content>
+      </hlm-dialog>
+    </div>
+  </div>
   <p hlmCardFooter class="text-sm">Modificado: 2024-05-14</p>
 </section>

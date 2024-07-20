@@ -1,0 +1,487 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.4.2",
+  "deps": {
+    "@angular/animations": "^18.0.0",
+    "@angular/cdk": "18.0.0",
+    "@angular/common": "^18.0.0",
+    "@angular/compiler": "^18.0.0",
+    "@angular/core": "^18.0.0",
+    "@angular/forms": "^18.0.0",
+    "@angular/platform-browser": "^18.0.0",
+    "@angular/platform-browser-dynamic": "^18.0.0",
+    "@angular/router": "^18.0.0",
+    "@ng-icons/core": "^25.1.0",
+    "@ng-icons/lucide": "^26.3.0",
+    "@spartan-ng/ui-checkbox-brain": "0.0.1-alpha.352",
+    "@spartan-ng/ui-core": "^0.0.1-alpha.352",
+    "@spartan-ng/ui-dialog-brain": "0.0.1-alpha.352",
+    "@spartan-ng/ui-label-brain": "0.0.1-alpha.352",
+    "@spartan-ng/ui-table-brain": "0.0.1-alpha.352",
+    "@spartan-ng/ui-toggle-brain": "0.0.1-alpha.352",
+    "class-variance-authority": "^0.6.0",
+    "clsx": "^1.2.1",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3",
+    "@angular-devkit/build-angular": "^18.0.7",
+    "@angular/cli": "^18.0.7",
+    "@angular/compiler-cli": "^18.0.0",
+    "@spartan-ng/cli": "^0.0.1-alpha.360",
+    "@types/jasmine": "~5.1.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss": "^3.4.4",
+    "tailwindcss-animate": "^1.0.6",
+    "typescript": "~5.4.2"
+  },
+  "pathMappings": {
+    "@spartan-ng/ui-button-helm": [
+      "./spartan-ui/ui-button-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-input-helm": [
+      "./spartan-ui/ui-input-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-label-helm": [
+      "./spartan-ui/ui-label-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-card-helm": [
+      "./spartan-ui/ui-card-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-checkbox-helm": [
+      "./spartan-ui/ui-checkbox-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-icon-helm": [
+      "./spartan-ui/ui-icon-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-toggle-helm": [
+      "./spartan-ui/ui-toggle-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-table-helm": [
+      "./spartan-ui/ui-table-helm/src/index.ts"
+    ],
+    "@spartan-ng/ui-dialog-helm": [
+      "./spartan-ui/ui-dialog-helm/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "PasswordManagerFrontend": [
+        {
+          "file": ".editorconfig",
+          "hash": "6686520031028425313"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "18168400278403753650"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "5331566439708925252"
+        },
+        {
+          "file": ".vscode/launch.json",
+          "hash": "17038929134016848735"
+        },
+        {
+          "file": ".vscode/tasks.json",
+          "hash": "5336636969995539451"
+        },
+        {
+          "file": "README.md",
+          "hash": "9575231318812006230"
+        },
+        {
+          "file": "angular.json",
+          "hash": "3884259336369391512"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "6412613518543573402"
+        },
+        {
+          "file": "package.json",
+          "hash": "9910818753530907751",
+          "deps": [
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@spartan-ng/cli",
+            "npm:@types/jasmine",
+            "npm:jasmine-core",
+            "npm:karma",
+            "npm:karma-chrome-launcher",
+            "npm:karma-coverage",
+            "npm:karma-jasmine",
+            "npm:karma-jasmine-html-reporter",
+            "npm:tailwind-merge",
+            "npm:tailwindcss",
+            "npm:tailwindcss-animate",
+            "npm:typescript",
+            "npm:@angular/animations",
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:@ng-icons/core",
+            "npm:@ng-icons/lucide",
+            "npm:@spartan-ng/ui-checkbox-brain",
+            "npm:@spartan-ng/ui-core",
+            "npm:@spartan-ng/ui-dialog-brain",
+            "npm:@spartan-ng/ui-label-brain",
+            "npm:@spartan-ng/ui-table-brain",
+            "npm:@spartan-ng/ui-toggle-brain",
+            "npm:class-variance-authority",
+            "npm:clsx",
+            "npm:rxjs",
+            "npm:tslib",
+            "npm:zone.js"
+          ]
+        },
+        {
+          "file": "public/favicon.ico",
+          "hash": "3988961587069885523"
+        },
+        {
+          "file": "public/logo.png",
+          "hash": "15980659819300316184"
+        },
+        {
+          "file": "spartan-ui/ui-button-helm/src/index.ts",
+          "hash": "8982221364966377158"
+        },
+        {
+          "file": "spartan-ui/ui-button-helm/src/lib/hlm-button.directive.ts",
+          "hash": "6707392129396539941"
+        },
+        {
+          "file": "spartan-ui/ui-card-helm/src/index.ts",
+          "hash": "16562238750490677596"
+        },
+        {
+          "file": "spartan-ui/ui-card-helm/src/lib/hlm-card-content.directive.ts",
+          "hash": "3041435324140004025"
+        },
+        {
+          "file": "spartan-ui/ui-card-helm/src/lib/hlm-card-description.directive.ts",
+          "hash": "12315658723134421129"
+        },
+        {
+          "file": "spartan-ui/ui-card-helm/src/lib/hlm-card-footer.directive.ts",
+          "hash": "10972621399707141653"
+        },
+        {
+          "file": "spartan-ui/ui-card-helm/src/lib/hlm-card-header.directive.ts",
+          "hash": "10914822965028795660"
+        },
+        {
+          "file": "spartan-ui/ui-card-helm/src/lib/hlm-card-title.directive.ts",
+          "hash": "9057266089303559552"
+        },
+        {
+          "file": "spartan-ui/ui-card-helm/src/lib/hlm-card.directive.ts",
+          "hash": "7761636437151111445"
+        },
+        {
+          "file": "spartan-ui/ui-checkbox-helm/src/index.ts",
+          "hash": "17713349125185817560"
+        },
+        {
+          "file": "spartan-ui/ui-checkbox-helm/src/lib/hlm-checkbox-checkicon.component.ts",
+          "hash": "4951566343371807688"
+        },
+        {
+          "file": "spartan-ui/ui-checkbox-helm/src/lib/hlm-checkbox.component.ts",
+          "hash": "12212766048013791681"
+        },
+        {
+          "file": "spartan-ui/ui-dialog-helm/src/index.ts",
+          "hash": "933315377037635710"
+        },
+        {
+          "file": "spartan-ui/ui-dialog-helm/src/lib/hlm-dialog-close.directive.ts",
+          "hash": "17866661867509768723"
+        },
+        {
+          "file": "spartan-ui/ui-dialog-helm/src/lib/hlm-dialog-content.component.ts",
+          "hash": "5994993106358186134"
+        },
+        {
+          "file": "spartan-ui/ui-dialog-helm/src/lib/hlm-dialog-description.directive.ts",
+          "hash": "9759836324361226386"
+        },
+        {
+          "file": "spartan-ui/ui-dialog-helm/src/lib/hlm-dialog-footer.component.ts",
+          "hash": "8998691143250607769"
+        },
+        {
+          "file": "spartan-ui/ui-dialog-helm/src/lib/hlm-dialog-header.component.ts",
+          "hash": "7114877699117126652"
+        },
+        {
+          "file": "spartan-ui/ui-dialog-helm/src/lib/hlm-dialog-overlay.directive.ts",
+          "hash": "14546294629942273129"
+        },
+        {
+          "file": "spartan-ui/ui-dialog-helm/src/lib/hlm-dialog-title.directive.ts",
+          "hash": "7320718966849072903"
+        },
+        {
+          "file": "spartan-ui/ui-dialog-helm/src/lib/hlm-dialog.component.ts",
+          "hash": "16056925347774960390"
+        },
+        {
+          "file": "spartan-ui/ui-dialog-helm/src/lib/hlm-dialog.service.ts",
+          "hash": "6172892527299412933"
+        },
+        {
+          "file": "spartan-ui/ui-icon-helm/src/index.ts",
+          "hash": "15313191911740362975"
+        },
+        {
+          "file": "spartan-ui/ui-icon-helm/src/lib/hlm-icon.component.spec.ts",
+          "hash": "4553494485907318760"
+        },
+        {
+          "file": "spartan-ui/ui-icon-helm/src/lib/hlm-icon.component.ts",
+          "hash": "166660981264464896"
+        },
+        {
+          "file": "spartan-ui/ui-input-helm/src/index.ts",
+          "hash": "487913567356772959"
+        },
+        {
+          "file": "spartan-ui/ui-input-helm/src/lib/hlm-input-error.directive.ts",
+          "hash": "17996525915591253064"
+        },
+        {
+          "file": "spartan-ui/ui-input-helm/src/lib/hlm-input.directive.ts",
+          "hash": "16055712985749591970"
+        },
+        {
+          "file": "spartan-ui/ui-label-helm/src/index.ts",
+          "hash": "11520514252818889827"
+        },
+        {
+          "file": "spartan-ui/ui-label-helm/src/lib/hlm-label.directive.ts",
+          "hash": "162448599590982201"
+        },
+        {
+          "file": "spartan-ui/ui-table-helm/src/index.ts",
+          "hash": "10469680382427192649"
+        },
+        {
+          "file": "spartan-ui/ui-table-helm/src/lib/hlm-caption.component.ts",
+          "hash": "7371483930197080077"
+        },
+        {
+          "file": "spartan-ui/ui-table-helm/src/lib/hlm-table.component.ts",
+          "hash": "10871754739613388511"
+        },
+        {
+          "file": "spartan-ui/ui-table-helm/src/lib/hlm-table.directive.ts",
+          "hash": "11306128400321269706"
+        },
+        {
+          "file": "spartan-ui/ui-table-helm/src/lib/hlm-td.component.ts",
+          "hash": "16649668457900922353"
+        },
+        {
+          "file": "spartan-ui/ui-table-helm/src/lib/hlm-th.component.ts",
+          "hash": "6090256936716140355"
+        },
+        {
+          "file": "spartan-ui/ui-table-helm/src/lib/hlm-trow.component.ts",
+          "hash": "648155726487399582"
+        },
+        {
+          "file": "spartan-ui/ui-toggle-helm/src/index.ts",
+          "hash": "6966680365662428912"
+        },
+        {
+          "file": "spartan-ui/ui-toggle-helm/src/lib/hlm-toggle-group.directive.ts",
+          "hash": "1616003539843363185"
+        },
+        {
+          "file": "spartan-ui/ui-toggle-helm/src/lib/hlm-toggle.directive.ts",
+          "hash": "11728164301124293711"
+        },
+        {
+          "file": "src/app/app.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/app.component.html",
+          "hash": "16498897523005705592"
+        },
+        {
+          "file": "src/app/app.component.spec.ts",
+          "hash": "12705405398576689060"
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "hash": "18357775562612155872"
+        },
+        {
+          "file": "src/app/app.config.ts",
+          "hash": "5028808807012428138"
+        },
+        {
+          "file": "src/app/app.routes.ts",
+          "hash": "2298168880121323320"
+        },
+        {
+          "file": "src/app/auth/lock/lock.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/auth/lock/lock.component.html",
+          "hash": "1657760605517877077"
+        },
+        {
+          "file": "src/app/auth/lock/lock.component.spec.ts",
+          "hash": "8765371321920482511"
+        },
+        {
+          "file": "src/app/auth/lock/lock.component.ts",
+          "hash": "12757709650228038735"
+        },
+        {
+          "file": "src/app/auth/login/login.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/auth/login/login.component.html",
+          "hash": "808690442698881640"
+        },
+        {
+          "file": "src/app/auth/login/login.component.spec.ts",
+          "hash": "15179653654270572066"
+        },
+        {
+          "file": "src/app/auth/login/login.component.ts",
+          "hash": "9799612219058442659"
+        },
+        {
+          "file": "src/app/auth/register/register.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/auth/register/register.component.html",
+          "hash": "3525677233466002586"
+        },
+        {
+          "file": "src/app/auth/register/register.component.spec.ts",
+          "hash": "15725190071510653360"
+        },
+        {
+          "file": "src/app/auth/register/register.component.ts",
+          "hash": "15233669968542054117"
+        },
+        {
+          "file": "src/app/guards/auth.guard.spec.ts",
+          "hash": "12942416802736267153"
+        },
+        {
+          "file": "src/app/guards/auth.guard.ts",
+          "hash": "9473559602381467147"
+        },
+        {
+          "file": "src/app/services/local-storage.service.spec.ts",
+          "hash": "9363603053729450449"
+        },
+        {
+          "file": "src/app/services/local-storage.service.ts",
+          "hash": "158811731573718101"
+        },
+        {
+          "file": "src/app/vault/safe-box/safe-box.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/vault/safe-box/safe-box.component.html",
+          "hash": "4170613079470299798"
+        },
+        {
+          "file": "src/app/vault/safe-box/safe-box.component.spec.ts",
+          "hash": "2862290355758596696"
+        },
+        {
+          "file": "src/app/vault/safe-box/safe-box.component.ts",
+          "hash": "14413624669738189301"
+        },
+        {
+          "file": "src/app/vault/vault-layout/header/header.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/vault/vault-layout/header/header.component.html",
+          "hash": "9140100432373081933"
+        },
+        {
+          "file": "src/app/vault/vault-layout/header/header.component.spec.ts",
+          "hash": "14720898316259393382"
+        },
+        {
+          "file": "src/app/vault/vault-layout/header/header.component.ts",
+          "hash": "11101243036183970060"
+        },
+        {
+          "file": "src/app/vault/vault-layout/sidebar/sidebar.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/vault/vault-layout/sidebar/sidebar.component.html",
+          "hash": "3878191583963081195"
+        },
+        {
+          "file": "src/app/vault/vault-layout/sidebar/sidebar.component.spec.ts",
+          "hash": "2644429123128746283"
+        },
+        {
+          "file": "src/app/vault/vault-layout/sidebar/sidebar.component.ts",
+          "hash": "4875959013597923179"
+        },
+        {
+          "file": "src/index.html",
+          "hash": "6804937637499516150"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "4927504514031276065"
+        },
+        {
+          "file": "src/styles.css",
+          "hash": "4725081781256088447"
+        },
+        {
+          "file": "tailwind.config.js",
+          "hash": "11769580463898969691"
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "17212958746959192557"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "14659620981201973301"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "8918301549046766373"
+        }
+      ]
+    },
+    "nonProjectFiles": []
+  }
+}
