@@ -1,4 +1,4 @@
-<div class="flex min-h-screen">
+<div class="flex h-screen">
   <aside class="w-[200px] min-w-[200px] bg-primary border-r border-r-dashed sidenav">
     <div class="flex flex-col h-full">
       <div class="flex shrink-0 px-8 items-center justify-between h-[96px]">
@@ -15,29 +15,22 @@
             <!-- menu item -->
             <div>
               <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                <a href="javascript:;" class="flex items-center flex-grow text-[1.15rem] text-white hover:text-dark">Mi
-                  cuenta</a>
+                <a href="javascript:;" class="flex items-center flex-grow text-[1.15rem] text-white hover:text-dark"
+                  routerLink="/vault/safe-box">Cajas fuertes</a>
               </span>
             </div>
             <!-- menu item -->
             <div>
               <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                <a href="javascript:;"
-                  class="flex items-center flex-grow text-[1.15rem] text-white hover:text-dark">Cajas fuertes</a>
+                <a href="javascript:;" class="flex items-center flex-grow text-[1.15rem] text-white hover:text-dark"
+                  routerLink="/vault/generator">Generador</a>
               </span>
             </div>
             <!-- menu item -->
             <div>
               <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                <a href="javascript:;"
-                  class="flex items-center flex-grow text-[1.15rem] text-white hover:text-dark">Generador</a>
-              </span>
-            </div>
-            <!-- menu item -->
-            <div>
-              <span class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                <a href="javascript:;"
-                  class="flex items-center flex-grow text-[1.15rem] text-white hover:text-dark">Configuracion</a>
+                <a href="javascript:;" class="flex items-center flex-grow text-[1.15rem] text-white hover:text-dark"
+                  routerLink="/vault/config">Configuracion</a>
               </span>
             </div>
           </div>
@@ -45,19 +38,12 @@
       </div>
     </div>
   </aside>
-  <div>
-    <app-header />
-    <div class="flex flex-wrap gap-4 justify-center">
-      <app-safe-box />
-      <app-safe-box />
-      <app-safe-box />
-      <app-safe-box />
-      <app-safe-box />
-      <app-safe-box />
-      <app-safe-box />
-      <app-safe-box />
-      <app-safe-box />
-      <app-safe-box />
+  <div class="flex-grow">
+    <div>
+      <app-header />
+    </div>
+    <div class="flex justify-center gap-4">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
